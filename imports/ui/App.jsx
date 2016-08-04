@@ -13,15 +13,11 @@ export default class App extends Component {
     ];
   }
 
- 
-
   renderPosts() {
     return this.getPosts().map((post) => (
-      <Post key={post._id} post={post} />
+      <Post key={post._id} text={post} />
     ));
   }
-
- 
 
   render() {
     return (
@@ -29,11 +25,10 @@ export default class App extends Component {
         <header>
           <h1>Todo List</h1>
         </header>
-        <ul>
-          {this.renderPosts()}
-        </ul>
+        {this.renderPosts()}
       </div>
     );
   }
 }
 
+//Setup front end first
