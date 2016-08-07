@@ -4,7 +4,15 @@ import React, { Component, PropTypes } from 'react';
 export default class Post extends Component {
   render() {
     return (
-      <li>{this.props.post.text}</li>
+      <div className="post">
+        <h2 className="postAuthor">
+        	{this.props.post.user_name}
+        </h2>
+        <h2 className="postTime">
+        	{String(this.props.post.timeCreated)}
+        </h2>
+        <p>{this.props.post.text}</p>
+      </div>
     );
   }
 }
