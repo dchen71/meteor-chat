@@ -1,15 +1,36 @@
 /* CSS declarations go here */
-header{
-	height: 50px;
-	width: 100%;
+html{
+	height: 100%;
 }
 
+/* 		*/
+/* Chat */
+/* 		*/
+
+/* Header */
+header{
+	height: 3vh;
+	width: 100%;
+	border-bottom: 1px solid #f1f1f1;
+	padding-bottom: 10px;
+}
+
+header h1{
+	text-transform: uppercase;
+	color: #8B8386;
+	margin-left: 20px;	
+	font-size: 1.5em;
+	font-weight: 400;
+}
+
+/* Sidebar user list */
 aside {
 	float: left;
 	width: 200px;
-	height: 100vh;
+	height: 90vh;
 }
 
+/* Posts list and input */
 .postsArea {
 	margin-left: 200px;
 }
