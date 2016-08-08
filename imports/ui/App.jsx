@@ -16,19 +16,45 @@ export default class App extends Component {
     ];
   }
 
+  //Render the posts
   renderPosts() {
     return this.getPosts().map((post) => (
-      <Post key={post._id} post={post} />
+      <main class="postsArea">
+        <Post key={post._id} post={post} />
+      </main>
     ));
+  }
+
+  //Render the side bar showing logged in users
+  renderUsers(){
+
+  }
+
+  //Render the user input at the bottom of the screen
+  renderInput(){
+
   }
 
   render() {
     return (
       <div>
         <header>
-          <h1>Todo List</h1>
+          <h1>Meteor Chat</h1>
         </header>
+        <aside>
+          <p>User1</p>
+          <p>User2</p>
+        </aside>
         {this.renderPosts()}
+        <div>
+          <form className="postForm">
+            <input
+              type="text"
+              placeholder="Say hello!"
+            />
+            <input type="submit" value="Post" />
+          </form>
+        </div>
       </div>
     );
   }
