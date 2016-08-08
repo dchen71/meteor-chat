@@ -30,6 +30,11 @@ aside {
 	height: 90vh;
 }
 
+aside p{
+	margin-left: 5px;
+	text-overflow:ellipsis;
+}
+
 /* Posts list and input */
 .postsArea {
 	margin-left: 200px;

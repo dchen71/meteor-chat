@@ -19,9 +19,7 @@ export default class App extends Component {
   //Render the posts
   renderPosts() {
     return this.getPosts().map((post) => (
-      <main class="postsArea">
         <Post key={post._id} post={post} />
-      </main>
     ));
   }
 
@@ -42,10 +40,20 @@ export default class App extends Component {
           <h1>Meteor Chat</h1>
         </header>
         <aside>
-          <p>User1</p>
-          <p>User2</p>
+          <div className="userList">
+            <div className="user">
+              <i className="fa fa-user" aria-hidden="true"></i>
+              <p>User1</p>
+            </div>
+            <div className="user">
+              <i className="fa fa-user" aria-hidden="true"></i>
+              <p>User2</p>
+            </div>
+          </div>
         </aside>
-        {this.renderPosts()}
+        <main className="postsArea">
+          {this.renderPosts()}
+        </main>
         <div>
           <form className="postForm">
             <input
