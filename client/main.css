@@ -28,11 +28,17 @@ aside {
 	float: left;
 	width: 200px;
 	height: 90vh;
+	margin-right: 30px;
+	border-right: 1px solid #f1f1f1;
 }
 
 aside p{
 	margin-left: 5px;
 	text-overflow:ellipsis;
+}
+
+.userList{
+	
 }
 
 /* Posts list and input */

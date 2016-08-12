@@ -7,12 +7,12 @@ export default class Post extends Component {
       <div className="post">
         <div className="postHeader">
         	<i className="fa fa-user" aria-hidden="true"></i>
-        	<h4 className="postAuthor">
+        	<h3 className="postAuthor">
         		{this.props.post.user_name}
-        	</h4>
-        	<h5 className="postTime">
+        	</h3>
+        	<h4 className="postTime">
         		{String(this.props.post.timeCreated)}
-        	</h5>
+        	</h4>
         </div>
         <div className="postContent">
         	<p>{this.props.post.text}</p>
