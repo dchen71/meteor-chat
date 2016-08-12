@@ -42,7 +42,7 @@ export default class App extends Component {
         <aside>
           <div className="userList">
             <div className="user">
-              <i className="fa fa-user" aria-hidden="true"></i>
+              <i className="fa fa-user"></i>
               <p>User1</p>
             </div>
             <div className="user">

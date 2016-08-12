@@ -5,13 +5,18 @@ export default class Post extends Component {
   render() {
     return (
       <div className="post">
-        <h2 className="postAuthor">
-        	{this.props.post.user_name}
-        </h2>
-        <h2 className="postTime">
-        	{String(this.props.post.timeCreated)}
-        </h2>
-        <p>{this.props.post.text}</p>
+        <div className="postHeader">
+        	<i className="fa fa-user" aria-hidden="true"></i>
+        	<h4 className="postAuthor">
+        		{this.props.post.user_name}
+        	</h4>
+        	<h5 className="postTime">
+        		{String(this.props.post.timeCreated)}
+        	</h5>
+        </div>
+        <div className="postContent">
+        	<p>{this.props.post.text}</p>
+        </div>
       </div>
     );
   }
