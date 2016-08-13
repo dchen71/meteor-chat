@@ -4,15 +4,25 @@ import { createContainer } from 'meteor/react-meteor-data';
 import { Posts } from '../api/posts.js';
 
 import Post from './Post.jsx';
+import User from './User.jsx';
 
 // App component - represents the whole app
 export default class App extends Component {
+  //Return a hash for the posts
   getPosts() {
     return [
       { _id: 1, user_name: "John", timeCreated: new Date("October 13, 2014 11:13:00"), text: 'Hello?' },
       { _id: 2, user_name: "John", timeCreated: new Date("November 20, 2015 08:00:00"), text: 'Anyone here?' },
       { _id: 3, user_name: "John", timeCreated: new Date("July 30, 2016 08:13:00"), text: "I'm a robot" },
       { _id: 4, user_name: "Mr.roboto", timeCreated: new Date("August 01, 2016 15:45:00"), text: 'You are a robot' },
+    ];
+  }
+
+  //Return a hash for users
+  getUsers(){
+    return [
+      {_id: 1, user_name: "Catman"},
+      {_id: 2, user_name: "Dogman"}
     ];
   }
 
@@ -23,9 +33,12 @@ export default class App extends Component {
     ));
   }
 
+
   //Render the side bar showing logged in users
   renderUsers(){
-
+    return this.getUsers().map((user) => (
+        <User key={user._id} user={user} />
+    ));
   }
 
   //Render the user input at the bottom of the screen
@@ -41,14 +54,7 @@ export default class App extends Component {
         </header>
         <aside>
           <div className="userList">
-            <div className="user">
-              <i className="fa fa-user"></i>
-              <p>User1</p>
-            </div>
-            <div className="user">
-              <i className="fa fa-user" aria-hidden="true"></i>
-              <p>User2</p>
-            </div>
+            {this.renderUsers()}
           </div>
         </aside>
         <main className="postsArea">
