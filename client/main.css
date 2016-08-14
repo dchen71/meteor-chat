@@ -62,12 +62,35 @@ aside p{
 	margin-left: 200px;
 }
 
+.post {
+	margin-top: 5px;
+	border-bottom: 1px solid #f1f1f1;
+}
+
+.postHeader i {
+	display: inline-block;
+}
+
+.postHeader h3 {
+	display: inline-block;
+	margin-left: 10px;
+	margin-bottom: 0;
+}
+
+.postHeader .postTime {
+	margin-top: 5px;
+	margin-bottom: 0;
+	font-style: italic;
+	display: inline-block;
+	float: right;
+}
+
 .postAuthor {
 	
 }
 
 .postTime {
-	
+	text-indent: 35px;
 }
 
 .post p {
