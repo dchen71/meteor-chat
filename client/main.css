@@ -90,9 +90,9 @@ aside p{
 }
 
 .postTime {
-	text-indent: 35px;
+	
 }
 
-.post p {
-
+.postContent p {
+	text-indent: 35px;
 }

@@ -43,7 +43,7 @@ export default class App extends Component {
 
   //Render the user input at the bottom of the screen
   renderInput(){
-
+    
   }
 
   render() {
