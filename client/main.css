@@ -1,6 +1,30 @@
 /* CSS declarations go here */
-html{
+#render-target{
 	height: 100%;
+}
+
+.container {
+	display: flex;
+}
+
+.cols {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+.rows {
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+}
+
+.flex-1 {
+	flex: 1;
 }
 
 /* 		*/
@@ -12,7 +36,7 @@ header{
 	height: 3vh;
 	width: 100%;
 	border-bottom: 1px solid #f1f1f1;
-	padding-bottom: 10px;
+	padding-bottom: 30px;
 }
 
 header h1{
@@ -26,10 +50,11 @@ header h1{
 /* Sidebar user list */
 aside {
 	float: left;
-	width: 200px;
+	position: relative;
+	width: 20%;
 	height: 90vh;
-	margin-right: 30px;
 	border-right: 1px solid #f1f1f1;
+	background: #f8f8f8;
 }
 
 aside p{
@@ -37,8 +62,13 @@ aside p{
 	text-overflow:ellipsis;
 }
 
+aside #usersOnline {
+	text-align: center;
+}
+
 .userList{
-	
+	min-height: 95%;
+	overflow-y: scroll;
 }
 
 .user {
@@ -59,7 +89,10 @@ aside p{
 
 /* Posts list and input */
 .postsArea {
-	margin-left: 200px;
+	width: 80%;
+	overflow-y: scroll;
+	position: relative;
+	float: left;
 }
 
 .post {
@@ -83,6 +116,7 @@ aside p{
 	font-style: italic;
 	display: inline-block;
 	float: right;
+	margin-right: 10px;
 }
 
 .postAuthor {
@@ -95,4 +129,9 @@ aside p{
 
 .postContent p {
 	text-indent: 35px;
+}
+
+/* Input */
+.postForm input{
+	height: auto;
 }
