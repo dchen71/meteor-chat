@@ -55,6 +55,7 @@ aside {
 	height: 90vh;
 	border-right: 1px solid #f1f1f1;
 	background: #f8f8f8;
+	padding-right: 10px;
 }
 
 aside p{
@@ -68,7 +69,7 @@ aside #usersOnline {
 
 .userList{
 	min-height: 95%;
-	overflow-y: scroll;
+	overflow-y: scroll;	
 }
 
 .user {
@@ -89,10 +90,11 @@ aside #usersOnline {
 
 /* Posts list and input */
 .postsArea {
-	width: 80%;
+	width: 78%;
 	overflow-y: scroll;
 	position: relative;
 	float: left;
+	padding-left: 10px;
 }
 
 .post {
