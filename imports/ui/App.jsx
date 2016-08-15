@@ -49,11 +49,11 @@ export default class App extends Component {
   render() {
     return (
       <div className="container cols">
-        <header>
+        <header className="container rows">
           <h1>Meteor Chat</h1>
         </header>
         <div className="rows flex-1">
-          <aside className="flex">
+          <aside className="flex flex-space-between cols">
             <p id="usersOnline">Users online</p>
             <div className="userList container cols">
               {this.renderUsers()}
@@ -62,15 +62,10 @@ export default class App extends Component {
           <main className="postsArea container cols flex">
             {this.renderPosts()}
           </main>
-          <div>
-            <form className="postForm">
-              <input
-                type="text"
-                placeholder="Say hello!"
-              />
-              <input type="submit" value="Post" />
-            </form>
-          </div>
+          <form className="postForm container flex-1 rows">
+            <input type="text" />
+            <input type="submit" value="Post" className="button-primary" />
+          </form>
         </div>
       </div>
     );

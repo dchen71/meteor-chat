@@ -27,22 +27,33 @@
 	flex: 1;
 }
 
+.flex-space-between {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
 /* 		*/
 /* Chat */
 /* 		*/
 
 /* Header */
 header{
-	height: 3vh;
-	width: 100%;
-	border-bottom: 1px solid #f1f1f1;
-	padding-bottom: 30px;
+	-webkit-box-pack: flex-start;
+	-webkit-justify-content: flex-start;
+	-ms-flex-pack: flex-start;
+	justify-content: flex-start;
 }
 
 header h1{
 	text-transform: uppercase;
 	color: #8B8386;
-	margin-left: 20px;	
+	padding-left: 20px;	
 	font-size: 1.5em;
 	font-weight: 400;
 }
@@ -55,7 +66,7 @@ aside {
 	height: 90vh;
 	border-right: 1px solid #f1f1f1;
 	background: #f8f8f8;
-	padding-right: 10px;
+	padding: 15px 15px 15px 15px;
 }
 
 aside p{
@@ -65,6 +76,7 @@ aside p{
 
 aside #usersOnline {
 	text-align: center;
+	margin-top: 0;
 }
 
 .userList{
@@ -90,7 +102,7 @@ aside #usersOnline {
 
 /* Posts list and input */
 .postsArea {
-	width: 78%;
+	width: 76%;
 	overflow-y: scroll;
 	position: relative;
 	float: left;
@@ -141,4 +153,22 @@ aside #usersOnline {
 /* Input */
 .postForm input{
 	height: auto;
+}
+
+.postForm {
+
+}
+
+.button-primary {
+	padding: 0.6em 1.2em;
+	background: #31D8A0;
+	color: #ffffff;
+	border: none;
+	border-radius: 5px;
+	transition: background 0.2s;
+}
+
+.button-primary:hover {
+	background: #27C895;
+	color: #ffffff;
 }
