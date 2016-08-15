@@ -100,25 +100,29 @@ aside #usersOnline {
 .post {
 	margin-top: 5px;
 	border-bottom: 1px solid #f1f1f1;
+	flex: 0 0 auto;
+	display: flex;
 }
 
-.postHeader i {
-	display: inline-block;
+.post i {
+	display: block;
+	margin-right: 10px;
+	transform: translateY(30%);
 }
 
-.postHeader h3 {
+.postContent h3 {
 	display: inline-block;
 	margin-left: 10px;
 	margin-bottom: 0;
 }
 
-.postHeader .postTime {
+.postContent .postTime {
 	margin-top: 5px;
 	margin-bottom: 0;
 	font-style: italic;
 	display: inline-block;
-	float: right;
-	margin-right: 10px;
+	color: #8B8386;
+	padding-left: 5px;
 }
 
 .postAuthor {
@@ -130,7 +134,8 @@ aside #usersOnline {
 }
 
 .postContent p {
-	text-indent: 35px;
+	text-indent: 10px;
+	margin-top: 5px;
 }
 
 /* Input */

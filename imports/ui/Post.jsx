@@ -4,17 +4,15 @@ import React, { Component, PropTypes } from 'react';
 export default class Post extends Component {
   render() {
     return (
-      <div className="post">
-        <div className="postHeader">
-        	<i className="fa fa-user fa-2x" aria-hidden="true"></i>
+      <div className="post rows">
+        <i className="fa fa-user fa-3x" aria-hidden="true"></i>
+        <div className="postContent">
         	<h3 className="postAuthor">
         		{this.props.post.user_name}
         	</h3>
-        	<h4 className="postTime">
+        	<h5 className="postTime">
         		{String(this.props.post.timeCreated)}
-        	</h4>
-        </div>
-        <div className="postContent">
+        	</h5>
         	<p>{this.props.post.text}</p>
         </div>
       </div>
