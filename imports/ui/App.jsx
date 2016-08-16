@@ -53,19 +53,21 @@ export default class App extends Component {
           <h1>Meteor Chat</h1>
         </header>
         <div className="rows flex-1">
-          <aside className="flex flex-space-between cols">
+          <aside className="container flex-space-between cols">
             <p id="usersOnline">Users online</p>
             <div className="userList container cols">
               {this.renderUsers()}
             </div>
           </aside>
-          <main className="postsArea container cols flex">
-            {this.renderPosts()}
-          </main>
-          <form className="postForm container flex-1 rows">
-            <input type="text" />
-            <input type="submit" value="Post" className="button-primary" />
-          </form>
+          <div className="container cols">
+            <main className="postsArea container cols">
+              {this.renderPosts()}
+            </main>
+            <form className="postForm flex-1 container rows">
+              <input type="text" />
+              <input type="submit" value="Post" className="button-primary" />
+            </form>
+          </div>
         </div>
       </div>
     );
