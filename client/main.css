@@ -102,7 +102,6 @@ aside #usersOnline {
 
 /* Posts list and input */
 .postsArea {
-	width: 76%;
 	overflow-y: scroll;
 	position: relative;
 	float: left;

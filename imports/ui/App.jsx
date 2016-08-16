@@ -63,7 +63,7 @@ export default class App extends Component {
             <main className="postsArea container cols">
               {this.renderPosts()}
             </main>
-            <form className="postForm flex-1 container rows">
+            <form className="postForm flex-1 container rows flex-space-between">
               <input type="text" />
               <input type="submit" value="Post" className="button-primary" />
             </form>
