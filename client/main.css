@@ -1,6 +1,7 @@
 /* CSS declarations go here */
 #render-target{
 	height: 100%;
+	margin: 0;
 }
 
 .container {
@@ -36,6 +37,14 @@
 
 *, *:before, *:after {
     box-sizing: border-box;
+}
+
+.col-3 {
+	width: 25%;
+}
+
+.col-9 {
+	width: 75%;
 }
 
 /* 		*/
@@ -104,7 +113,6 @@ aside #usersOnline {
 .postsArea {
 	overflow-y: scroll;
 	position: relative;
-	float: left;
 	padding-left: 10px;
 }
 
