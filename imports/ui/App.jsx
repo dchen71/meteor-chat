@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
 import ReactDOM from 'react-dom';
 
@@ -8,7 +8,7 @@ import Post from './Post.jsx';
 import User from './User.jsx';
 
 // App component - represents the whole app
-export default class App extends Component {
+class App extends Component {
   //Return a hash for the posts
   getPosts() {
     return [
@@ -60,7 +60,7 @@ export default class App extends Component {
     });
 
     // Clear form
-    ReactDOM.findDOMNode(this.refs.textInput).value = '';
+    ReactDOM.findDOMNode(this.refs.postInput).value = '';
   }
 
   render() {
@@ -91,3 +91,13 @@ export default class App extends Component {
   }
 }
 
+//Gets data from the posts collection
+App.propTypes = {
+  posts: PropTypes.array.isRequired,
+};
+
+export default createContainer(() => {
+  return {
+    posts: Posts.find({}).fetch(),
+  };
+}, App);
