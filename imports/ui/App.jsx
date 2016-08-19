@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
+import ReactDOM from 'react-dom';
 
 import { Posts } from '../api/posts.js';
 
@@ -46,6 +47,22 @@ export default class App extends Component {
     
   }
 
+  //Event handler to insert new post
+  handleSubmit(event) {
+    event.preventDefault();
+
+    // Find the text field via the React ref
+    const text = ReactDOM.findDOMNode(this.refs.postInput).value.trim();
+
+    Posts.insert({
+      text,
+      timeCreated: new Date(), // current time
+    });
+
+    // Clear form
+    ReactDOM.findDOMNode(this.refs.textInput).value = '';
+  }
+
   render() {
     return (
       <div className="container cols">
@@ -63,8 +80,8 @@ export default class App extends Component {
             <main className="postsArea container cols flex-1">
               {this.renderPosts()}
             </main>
-            <form className="postForm container rows flex-space-between">
-              <input type="text" className="flex-1"/>
+            <form className="postForm container rows flex-space-between" onSubmit={this.handleSubmit.bind(this)}>
+              <input type="text" ref="postInput" className="flex-1"/>
               <input type="submit" value="Post" className="button-primary" />
             </form>
           </div>

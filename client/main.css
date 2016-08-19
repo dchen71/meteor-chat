@@ -1,4 +1,8 @@
 /* CSS declarations go here */
+html {
+	margin: 0;
+}
+
 #render-target{
 	height: 100%;
 	margin: 0;
