@@ -116,8 +116,8 @@ aside #usersOnline {
 /* Posts list and input */
 .postsArea {
 	overflow-y: scroll;
-	position: relative;
 	padding-left: 10px;
+	height: 85vh;
 }
 
 .post {
@@ -145,7 +145,6 @@ aside #usersOnline {
 	font-style: italic;
 	display: inline-block;
 	color: #8B8386;
-	padding-left: 5px;
 }
 
 .postAuthor {
