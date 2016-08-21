@@ -29,7 +29,7 @@ class App extends Component {
 
   //Render the posts
   renderPosts() {
-    return this.getPosts().map((post) => (
+    return this.props.posts.map((post) => (
         <Post key={post._id} post={post} />
     ));
   }

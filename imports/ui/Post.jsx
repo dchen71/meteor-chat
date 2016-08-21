@@ -5,7 +5,7 @@ export default class Post extends Component {
   render() {
     return (
       <div className="post rows">
-        <i className="fa fa-user fa-3x" aria-hidden="true"></i>
+        <i className="fa fa-user fa-2x" aria-hidden="true"></i>
         <div className="postContent">
         	<h3 className="postAuthor">
         		{this.props.post.user_name}
