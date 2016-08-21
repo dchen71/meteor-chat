@@ -7,7 +7,12 @@ export const Posts = new Mongo.Collection('posts');
 Meteor.methods({
   //Add post method
   'posts.insert'(text) {
-    check(text, String); // Makes sure that the post is a post
+    //Method to check if string and if empty or not
+  	NonEmptyString = Match.Where(function (x) {
+  		check(x, String);
+  		return x.length > 0;
+  	}); 
+  	check(text, NonEmptyString); // Makes sure that the post is a non empty string
 
     // Make sure the user is logged in before inserting a post
     /*
