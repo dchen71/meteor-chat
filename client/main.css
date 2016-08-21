@@ -145,6 +145,7 @@ aside #usersOnline {
 	font-style: italic;
 	display: inline-block;
 	color: #8B8386;
+	padding-left: 5px;
 }
 
 .postAuthor {

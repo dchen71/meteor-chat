@@ -55,6 +55,7 @@ class App extends Component {
     const text = ReactDOM.findDOMNode(this.refs.postInput).value.trim();
 
     Posts.insert({
+      user_name: "User1",
       text,
       timeCreated: new Date(), // current time
     });

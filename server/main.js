@@ -1,6 +1,16 @@
 import { Meteor } from 'meteor/meteor';
-import '../imports/api/posts.js';
+import { Posts } from'../imports/api/posts.js';
+
+//Clean up posts
+Posts.remove({}); 
 
 Meteor.startup(() => {
-  // code to run on server at startup
+   //Init tags
+  if (Posts.find().count() === 0) {
+  	Posts.insert({
+  	  user_name: "John",
+  	  text: "Post1",
+  	  timeCreated: new Date(), // current time
+  	});
+  }
 });
