@@ -1,5 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 
+import { Posts } from '../api/posts.js';
+
 // Post component - represents a single post item
 export default class Post extends Component {
   render() {

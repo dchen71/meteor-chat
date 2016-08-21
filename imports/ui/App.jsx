@@ -9,16 +9,6 @@ import User from './User.jsx';
 
 // App component - represents the whole app
 class App extends Component {
-  //Return a hash for the posts
-  getPosts() {
-    return [
-      { _id: 1, user_name: "John", timeCreated: new Date("October 13, 2014 11:13:00"), text: 'Hello?' },
-      { _id: 2, user_name: "John", timeCreated: new Date("November 20, 2015 08:00:00"), text: 'Anyone here?' },
-      { _id: 3, user_name: "John", timeCreated: new Date("July 30, 2016 08:13:00"), text: "I'm a robot" },
-      { _id: 4, user_name: "Mr.roboto", timeCreated: new Date("August 01, 2016 15:45:00"), text: 'You are a robot' },
-    ];
-  }
-
   //Return a hash for users
   getUsers(){
     return [
@@ -42,11 +32,6 @@ class App extends Component {
     ));
   }
 
-  //Render the user input at the bottom of the screen
-  renderInput(){
-    
-  }
-
   //Event handler to insert new post
   handleSubmit(event) {
     event.preventDefault();
@@ -54,11 +39,7 @@ class App extends Component {
     // Find the text field via the React ref
     const text = ReactDOM.findDOMNode(this.refs.postInput).value.trim();
 
-    Posts.insert({
-      user_name: "User1",
-      text,
-      timeCreated: new Date(), // current time
-    });
+    Meteor.call('posts.insert', text)
 
     // Clear form
     ReactDOM.findDOMNode(this.refs.postInput).value = '';
@@ -99,6 +80,6 @@ App.propTypes = {
 
 export default createContainer(() => {
   return {
-    posts: Posts.find({}).fetch(),
+    posts: Posts.find({}, {sort: { timeCreated: 1 }}).fetch(),
   };
 }, App);
