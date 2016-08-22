@@ -8,6 +8,8 @@ html {
 	margin: 0;
 }
 
+
+/* Flexbox containers */
 .container {
 	display: flex;
 }
@@ -43,12 +45,22 @@ html {
     box-sizing: border-box;
 }
 
+
+/* Column spacing */
+.col-2 {
+	width: 20%;
+}
+
 .col-3 {
 	width: 25%;
 }
 
 .col-9 {
 	width: 75%;
+}
+
+.col-10 {
+	width: 80%;
 }
 
 /* 		*/

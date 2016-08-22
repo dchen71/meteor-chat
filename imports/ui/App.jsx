@@ -52,13 +52,13 @@ class App extends Component {
           <h1>Meteor Chat</h1>
         </header>
         <div className="rows flex-1 container">
-          <aside className="container flex-space-between cols col-3">
+          <aside className="container flex-space-between cols col-2">
             <p id="usersOnline">Users online</p>
             <div className="userList container cols">
               {this.renderUsers()}
             </div>
           </aside>
-          <div className="container cols content col-9">
+          <div className="container cols content col-10">
             <main className="postsArea container cols flex-1">
               {this.renderPosts()}
             </main>
