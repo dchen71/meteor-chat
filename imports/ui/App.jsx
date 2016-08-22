@@ -51,8 +51,8 @@ class App extends Component {
       <div className="container cols">
         <header className="container rows">
           <h1>Meteor Chat</h1>
+          <AccountsUIWrapper />
         </header>
-        <AccountsUIWrapper />
         <div className="rows flex-1 container">
           <aside className="container flex-space-between cols col-2">
             <p id="usersOnline">Users online</p>

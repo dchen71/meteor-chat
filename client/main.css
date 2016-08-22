@@ -83,6 +83,10 @@ header h1{
 	font-weight: 400;
 }
 
+header span{
+	margin-left: auto;
+}
+
 /* Sidebar user list */
 aside {
 	float: left;
