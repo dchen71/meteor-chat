@@ -6,7 +6,13 @@ export const Posts = new Mongo.Collection('posts');
 
 // Publish posts
 if (Meteor.isServer) {
-  Meteor.publish('postts', function postsPublication() {
+  Meteor.publish('posts', function postsPublication() {
+    /* 
+    //Shows posts only if logged in
+    if(Meteor.user()){
+    	return Posts.find();
+    }
+    */
     return Posts.find();
   });
 }
