@@ -4,6 +4,13 @@ import { check } from 'meteor/check';
 
 export const Posts = new Mongo.Collection('posts');
 
+// Publish posts
+if (Meteor.isServer) {
+  Meteor.publish('postts', function postsPublication() {
+    return Posts.find();
+  });
+}
+
 Meteor.methods({
   //Add post method
   'posts.insert'(text) {
