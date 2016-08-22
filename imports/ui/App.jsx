@@ -6,6 +6,7 @@ import { Posts } from '../api/posts.js';
 
 import Post from './Post.jsx';
 import User from './User.jsx';
+import AccountsUIWrapper from './AccountsUIWrapper.jsx';
 
 // App component - represents the whole app
 class App extends Component {
@@ -51,6 +52,7 @@ class App extends Component {
         <header className="container rows">
           <h1>Meteor Chat</h1>
         </header>
+        <AccountsUIWrapper />
         <div className="rows flex-1 container">
           <aside className="container flex-space-between cols col-2">
             <p id="usersOnline">Users online</p>

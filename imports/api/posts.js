@@ -7,12 +7,6 @@ export const Posts = new Mongo.Collection('posts');
 // Publish posts
 if (Meteor.isServer) {
   Meteor.publish('posts', function postsPublication() {
-    /* 
-    //Shows posts only if logged in
-    if(Meteor.user()){
-    	return Posts.find();
-    }
-    */
     return Posts.find();
   });
 }
@@ -28,17 +22,15 @@ Meteor.methods({
   	check(text, NonEmptyString); // Makes sure that the post is a non empty string
 
     // Make sure the user is logged in before inserting a post
-    /*
     if (! this.userId) {
       throw new Meteor.Error('not-authorized');
     }
-    */
+    
 
     Posts.insert({
       text,
       timeCreated: new Date(),
-      //user_name: Meteor.users.findOne(this.userId).username,
-      user_name: "John", //temp username
+      user_name: Meteor.users.findOne(this.userId).username,
     });
 
   },
