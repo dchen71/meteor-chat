@@ -75,7 +75,6 @@ header h1{
 aside {
 	float: left;
 	position: relative;
-	width: 20%;
 	height: 90vh;
 	border-right: 1px solid #f1f1f1;
 	background: #f8f8f8;
